@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: classifier
+  labels:
+    app: classifier
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: classifier
+  template:
+    metadata:
+      labels:
+        app: classifier
+    spec:
+      containers:
+      - name: classifier
+        image: sachinpanigrahi/classifier:latest

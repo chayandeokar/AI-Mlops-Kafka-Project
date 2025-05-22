@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+kafka-python
+opencv-python-headless
+numpy
+pillow 

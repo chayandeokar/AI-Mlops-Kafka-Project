@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+kafka-python
+opencv-python-headless 
+numpy
+pillow
+tensorflow  
+torch 
+torchvision  

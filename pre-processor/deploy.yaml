@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: preprocessor
+  labels:
+    app: preprocessor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: preprocessor
+  template:
+    metadata:
+      labels:
+        app: preprocessor
+    spec:
+      containers:
+      - name: preprocessor
+        image: sachinpanigrahi/preprocessor:latest
