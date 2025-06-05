@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka-live
+  namespace: kafka
+  labels:
+    app: kafka-kowl
+    service: kafka-live
+spec:
+  selector:
+    app: kafka-kowl
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8080
+    - name: http-alt
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
