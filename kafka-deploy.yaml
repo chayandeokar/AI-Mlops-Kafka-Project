@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-kowl
+  namespace: kafka
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kafka-kowl
+  template:
+    metadata:
+      labels:
+        app: kafka-kowl
+    spec:
+      containers:
+      - name: kowl-ui
+        image: quay.io/cloudhut/kowl:master
+        env:
+        - name: KAFKA_BROKERS
+          value: my-cluster-kafka-bootstrap:9092
+ 
