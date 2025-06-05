@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: sachinpanigrahi/ui
+        image: sachinpanigrahi/ui:1
         ports:
         - containerPort: 8000
